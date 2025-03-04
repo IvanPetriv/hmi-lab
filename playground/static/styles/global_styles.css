@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+
+
+}
+
+.main-container {
+    display: flex;
+}
+
+.aside-component {
+    width: 25%;
+}

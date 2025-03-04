@@ -1,0 +1,9 @@
+.aside-component {
+    margin-right: 20px;
+    background-color: #fafafa;
+    box-shadow: 5px 0 16px #00000055;
+}
+
+ul {
+    list-style-type: none
+}
