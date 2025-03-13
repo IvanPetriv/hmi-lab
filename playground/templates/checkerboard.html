@@ -1,0 +1,36 @@
+{% with primary_color="#bb9977" %}
+    {% with secondary_color="#ffeada" %}
+        <svg viewBox="0 0 8 8" preserveAspectRatio="none">
+            <defs>
+                <pattern id="checker" width="0.25" height="0.25" patternUnits="objectBoundingBox">
+                    <rect width="2" height="2" fill="{{primary_color}}"/>
+                    <rect width="1" height="1" fill="{{secondary_color}}"/>
+                    <rect x="1" y="1" width="1" height="1" fill="{{secondary_color}}"/>
+                </pattern>
+            </defs>
+            <rect width="8" height="8" fill="url(#checker)" />
+
+            <g font-size="0.27" font-weight="600" fill="black" text-anchor="middle">
+                <!-- Left Side -->
+                <text x="0.15" y="0.35" fill="{{primary_color}}">8</text>
+                <text x="0.15" y="1.35" fill="{{secondary_color}}">7</text>
+                <text x="0.15" y="2.35" fill="{{primary_color}}">6</text>
+                <text x="0.15" y="3.35" fill="{{secondary_color}}">5</text>
+                <text x="0.15" y="4.35" fill="{{primary_color}}">4</text>
+                <text x="0.15" y="5.35" fill="{{secondary_color}}">3</text>
+                <text x="0.15" y="6.35" fill="{{primary_color}}">2</text>
+                <text x="0.15" y="7.35" fill="{{secondary_color}}">1</text>
+
+                <!-- Top Side -->
+                <text x="0.25" y="7.85" fill="{{secondary_color}}">a</text>
+                <text x="1.25" y="7.85" fill="{{primary_color}}">b</text>
+                <text x="2.25" y="7.85" fill="{{secondary_color}}">c</text>
+                <text x="3.25" y="7.85" fill="{{primary_color}}">d</text>
+                <text x="4.25" y="7.85" fill="{{secondary_color}}">e</text>
+                <text x="5.25" y="7.85" fill="{{primary_color}}">f</text>
+                <text x="6.25" y="7.85" fill="{{secondary_color}}">g</text>
+                <text x="7.25" y="7.85" fill="{{primary_color}}">h</text>
+            </g>
+        </svg>
+    {% endwith %}
+{% endwith %}

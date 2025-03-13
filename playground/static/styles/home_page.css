@@ -1,0 +1,42 @@
+#home-play-options {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 48px;
+}
+
+.home-play-option-button {
+    font-size: 2em;
+    border-style: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.home-play-option-button > a {
+    display: inline-block;
+    padding: 12px 20px;
+    color: black;
+    text-decoration: none;
+    width: calc(100% - 40px);
+}
+
+#home-play-history-title {
+    padding: 12px 20px;
+    margin-top: 50px;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+#home-play-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+}
+
+.home-play-history-element {
+    padding: 12px;
+    background-color: #fafafa;
+    border-radius: 12px;
+    box-shadow: 2px 2px 6px #00000022;
+}

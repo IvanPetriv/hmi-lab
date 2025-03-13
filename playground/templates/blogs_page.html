@@ -2,17 +2,59 @@
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static './styles/global_styles.css' %}">
+    {% include "head_preset.html" %}
+    <link rel="stylesheet" href="{% static './styles/blogs_page.css' %}">
     <title>Chess - Blogs</title>
 </head>
 <body>
-    <div class="main-container">
+    <div class="container">
         {% include "aside_comp.html" %}
-        <div>p</div>
+        <div class="main-component">
+            <div id="blogs-head">
+                <h1 class="component-title">Blogs</h1>
+                <div id="blogs-arrange-options">
+                    <form id="blogs-arrange-container" action="">
+                        <div id="blogs-arrange-sort">
+                            <div id="blogs-arrange-sort-title">Sort by:</div>
+                            <div id="blogs-arrange-sort-criteria">
+                                <select name="sort-order" id="blogs-arrange-sort-order">
+                                    <option value="date">Date</option>
+                                    <option value="length">Blog length</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="blogs-arrange-filter">
+                            <div id="blogs-arrange-filter-title">Filter by:</div>
+                            <div id="blogs-arrange-filter-criteria">
+                                <input type="text" name="filter-by-user" placeholder="Enter a username"/>
+                                <input type="datetime-local" name="filter-by-date-start"/>
+                                <input type="datetime-local" name="filter-by-date-end"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="blogs-list">
+                {% for element in elements %}
+                    <div class="blogs-list-element">
+                        <!-- Side blog information -->
+                        <div class="blogs-list-element-side">
+                            <div class="blogs-list-element-image-frame">
+                                <img src="{% static element.author_image_url %}"
+                                     alt="Blog author picture" class="blogs-list-element-image"/>
+                            </div>
+                            <div class="blogs-list-element-author">{{element.author}}</div>
+                            <div class="blogs-list-element-datetime">Published at: {{element.datetime}}</div>
+                        </div>
+                        <!-- Main blog information -->
+                        <div class="blogs-list-element-main">
+                            <h2 class="blogs-list-element-title">{{element.title}}</h2>
+                            <div class="blogs-list-element-description">{{element.description}}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -125,4 +125,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STOCKFISH_PATH = r'D:\Development\stockfish\stockfish-windows-x86-64-avx2'
+# Uses sessions instead of DB
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+
+# Chess engine path
+CHESS_ENGINE_PATH = r'D:\Development\stockfish\stockfish-windows-x86-64-avx2'

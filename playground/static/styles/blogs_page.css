@@ -1,0 +1,73 @@
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+#blogs-head {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Ensure background color to avoid overlap issues */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+#blogs-arrange-container {
+    display: flex;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    box-shadow: 0px 4px 3px rgba(50, 50, 50, 0.25);
+}
+
+
+
+#blogs-list {
+    overflow: auto;
+}
+
+.blogs-list-element {
+    display: flex;
+    gap: 16px;
+    margin: 12px 24px 12px 0;
+    padding: 12px;
+    background-color: #fafafa;
+    box-shadow: 4px 4px 16px #8888887f;
+    border-radius: 12px;
+}
+
+/* Side information of the element */
+.blogs-list-element-side {
+    width: 12%;
+}
+
+.blogs-list-element-image-frame {
+    margin: 3px 10px;
+}
+
+.blogs-list-element-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.blogs-list-element-author {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.blogs-list-element-datetime {
+    text-align: center;
+    font-size: 0.6em;
+}
+
+/* Main information of the element */
+.blogs-list-element-main {
+
+}
+
+.blogs-list-element-title {
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+.blogs-list-element-description {
+
+}

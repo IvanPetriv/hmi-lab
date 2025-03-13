@@ -2,17 +2,28 @@
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static './styles/global_styles.css' %}">
+    {% include "head_preset.html" %}
+    <link rel="stylesheet" href="{% static './styles/home_page.css' %}">
     <title>Chess - Home</title>
 </head>
 <body>
-    <div class="main-container">
+    <div class="container">
         {% include "aside_comp.html" %}
-        <div>p</div>
+        <div class="main-component">
+            <h1 class="component-title">Chess: Home</h1>
+            <div id="home-play-options">
+                <button class="home-play-option-button"><a href="/playground/play/">Play with computer</a></button>
+                <button class="home-play-option-button"><a href="/playground/play/">Play with a friend</a></button>
+            </div>
+            <div id="home-play-history-title">Game history</div>
+            <div id="home-play-history-list">
+                {% for game in played_games %}
+                <div class="home-play-history-element">
+                    <div class="">{{game}}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </body>
 </html>

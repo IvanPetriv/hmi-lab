@@ -8,11 +8,30 @@
     <div class="aside-component">
         <div class="aside-options-list">
             <ul>
-                <li>Home</li>
-                <li>Learn</li>
-                <li></li>
-                <li>Blogs</li>
+                <li><a href="/playground/home/">Home</a></li>
+                <li><a href="">Learn</a></li>
+                <li><a href="">Rankings</a></li>
+                <li><a href="/playground/blogs/">Blogs</a></li>
+                <li><a href="/playground/faq/">FAQ</a></li>
             </ul>
+        </div>
+        <div class="aside-profile-settings-container">
+            <a href="/playground/profile" class="aside-profile-link">
+                <div class="aside-profile-container">
+                    <div class="aside-profile-picture-frame">
+                        <img src="{% static './pictures/profile-picture.jpg' %}" alt="Profile picture" class="aside-profile-picture"/>
+                    </div>
+                    <div class="aside-profile-details">
+                        <div class="aside-profile-details-name">Name</div>
+                        <div class="aside-profile-details-action">View your profile</div>
+                    </div>
+                </div>
+            </a>
+            <a href="/playground/settings/" class="aside-settings-link">
+                <button class="aside-settings-button">
+                    <img src="{% static './icons/settings.png' %}" alt="Settings"/>
+                </button>
+            </a>
         </div>
     </div>
 </body>

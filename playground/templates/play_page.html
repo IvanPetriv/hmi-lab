@@ -1,18 +1,66 @@
 <!doctype html>
+{% csrf_token %}
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static './styles/global_styles.css' %}">
+    {% include "head_preset.html" %}
+    <link rel="stylesheet" href="{% static './styles/play_page.css' %}">
     <title>Chess - Play</title>
+
+    <link rel="stylesheet" href="{% static 'chessboard/css/chessboard-1.0.0.min.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'chessboard/js/chessboard-1.0.0.min.js' %}"></script>
+
+    <script type="module" src="{% static './scripts/boardSetup.js' %}"></script>
 </head>
 <body>
-    <div class="main-container">
+    <div class="container">
         {% include "aside_comp.html" %}
-        <div>p</div>
+        <div class="main-component">
+            <div id="play-halves">
+                <div id="play-area">
+                    <div id="play-opponent-info" class="play-player-info">
+                        <div class="play-player-picture">
+                            <img src="{% static './pictures/170720171937.jpg' %}" alt="Opponent's profile picture"/>
+                        </div>
+                        <div class="play-player-stats">
+                            <div class="play-player-stats-username">
+                                {{game_id}}
+                            </div>
+                            <div class="play-player-stats-elo">Elo: 490</div>
+                        </div>
+                        <div class="play-player-time">10:00</div>
+                    </div>
+                    <div id="play-board">
+                        <div id="play-board-svg" style="width: 100%"></div>
+                        <script type="module" src="{% static 'scripts/boardSetup.js' %}"></script>
+                    </div>
+                    <div id="play-your-info" class="play-player-info">
+                        <div class="play-player-picture">
+                            <img src="{% static './pictures/profile-picture.jpg' %}" alt="Your profile picture"/>
+                        </div>
+                        <div class="play-player-stats">
+                            <div class="play-player-stats-username">FobosPlayer</div>
+                            <div class="play-player-stats-elo">Elo: 1000</div>
+                        </div>
+                        <div class="play-player-time">9:43</div>
+                    </div>
+                </div>
+                <div id="play-info">
+                    <div id="play-info-player-moves-header">Player moves</div>
+                    <div class="play-info-player-moves">
+                        <div>er</div>
+                        <div>er</div>
+                        <div>er</div>
+                    </div>
+                    <div id="play-info-player-options">
+                        <button id="play-info-player-option-draw" class="player-option-button">Suggest a draw</button>
+                        <button id="play-info-player-option-resign" class="player-option-button">Resign</button>
+                        <button id="play-info-player-option-reset" class="player-option-button">Reset Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
