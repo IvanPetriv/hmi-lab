@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "author": {
+        "type": "string"
+      },
+      "author_image_url": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "content": {
+        "type": "string"
+      },
+      "datetime": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "required": [
+      "id",
+      "title",
+      "author",
+      "author_image_url",
+      "description",
+      "content",
+      "datetime"
+    ]
+  }
+}

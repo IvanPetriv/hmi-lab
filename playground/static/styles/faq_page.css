@@ -1,0 +1,17 @@
+.faq-list {
+    margin: 20px 20px 0 0;
+}
+
+.faq-list-element {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fafafa;
+    box-shadow: 4px 4px 16px #8888887f;
+    border-radius: 12px;
+}
+
+.faq-list-element-question {
+    margin-top: 0;
+}

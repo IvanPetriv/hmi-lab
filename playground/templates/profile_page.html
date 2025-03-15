@@ -9,7 +9,26 @@
 <body>
     <div class="container">
         {% include "aside_comp.html" %}
-        <div>p</div>
+        <div class="main-component">
+            <h1 class="component-title">Profile</h1>
+            <div id="profile-container">
+                <div id="profile-avatar">
+                    <div id="profile-avatar-image-frame">
+                        <img src="{% static user.profile_picture_url %}" alt="Your profile picture" id="profile-avatar-image"/>
+                    </div>
+                </div>
+                <div id="profile-name-container">
+                    <h2 id="profile-name">{{user.name}}</h2>
+                    <button id="profile-name-edit-button">
+                        <img src="{% static './icons/edit.png' %}" alt="Your profile picture" id="profile-name-edit-button-image"/>
+                    </button>
+                </div>
+                <div id="profile-stats-container">
+                    <div id="profile-stat-elo">Elo: {{user.elo}}</div>
+                    <div id="profile-stat-ranking">Ranking: #{{user.ranking}}</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

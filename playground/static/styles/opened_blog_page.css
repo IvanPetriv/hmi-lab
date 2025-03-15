@@ -1,0 +1,30 @@
+#bdetails-author {
+    display: flex;
+}
+
+#bdetails-author-side {
+    flex: 2;
+}
+
+#bdetails-author-image-frame {
+
+}
+
+#bdetails-author-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#bdetails-author-main {
+    flex: 7;
+}
+
+#bdetails-author-name {
+    font-weight: 600;
+}
+
+#bdetails-content {
+    margin-top: 50px;
+}

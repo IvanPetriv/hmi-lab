@@ -1,0 +1,29 @@
+#settings-main {
+    display: flex;
+    flex-direction: column;
+}
+
+#settings-tabs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.settings-list-element {
+    display: flex;
+    gap: 16px;
+    margin: 12px 24px 12px 0;
+    padding: 12px;
+    background-color: #fafafa;
+    box-shadow: 4px 4px 16px #8888887f;
+    border-radius: 12px;
+}
+
+.settings-list-element-info {
+    flex: 7;
+}
+
+.settings-list-element-options {
+    display: flex;
+    justify-content: end;
+    flex: 2;
+}

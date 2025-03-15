@@ -1,0 +1,10 @@
+[
+  {
+    "question": "Why a pawn captured my pawn even though it couldn’t on 4th rank?",
+    "answer": "This capture can happen if you moved your pawn 2 squares forward and opponent’s pawn was also on 4th rank besides yours. This capture is called “en passant”."
+  },
+  {
+    "question": "How to change a picture of my profile?",
+    "answer": "Go to your profile on the left bottom. On your picture, there’s a button “change”. Press it. Change your picture and press “Upload”."
+  }
+]

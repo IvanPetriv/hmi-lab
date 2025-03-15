@@ -10,8 +10,14 @@
     <div class="container">
         {% include "aside_comp.html" %}
         <div class="main-component">
-
-
+            <div class="faq-list">
+                {% for faq in faq_list %}
+                    <div class="faq-list-element">
+                        <h2 class="faq-list-element-question">Q: {{faq.question}}</h2>
+                        <div class="faq-list-element-answer">A: {{faq.answer}}</div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </body>

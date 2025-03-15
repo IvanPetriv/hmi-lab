@@ -1,6 +1,6 @@
 <!doctype html>
 {% load static %}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     {% include "head_preset.html" %}
     <link rel="stylesheet" href="{% static './styles/home_page.css' %}">
@@ -12,14 +12,23 @@
         <div class="main-component">
             <h1 class="component-title">Chess: Home</h1>
             <div id="home-play-options">
-                <button class="home-play-option-button"><a href="/playground/play/">Play with computer</a></button>
-                <button class="home-play-option-button"><a href="/playground/play/">Play with a friend</a></button>
+                <button class="home-play-option-button"><a href="/playground/play/">Play with<br/>computer</a></button>
+                <button class="home-play-option-button"><a href="/playground/play/">Play with<br/>a friend</a></button>
             </div>
             <div id="home-play-history-title">Game history</div>
             <div id="home-play-history-list">
                 {% for game in played_games %}
                 <div class="home-play-history-element">
-                    <div class="">{{game}}</div>
+                    <div class="home-play-history-element-id">Game ID: <b>{{game.game_id}}</b></div>
+                    <div class="home-play-history-element-details">
+                        <div class="home-play-history-element-players">
+                            <div class="home-play-history-element-player-1">{{game.player_1}}</div>
+                            <div class="home-play-history-element-player-2">{{game.player_2}}</div>
+                        </div>
+                        <div class="home-play-history-element-result">
+                            {{game.result}}
+                        </div>
+                    </div>
                 </div>
                 {% endfor %}
             </div>

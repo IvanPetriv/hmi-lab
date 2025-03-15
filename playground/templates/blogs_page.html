@@ -35,23 +35,25 @@
                 </div>
             </div>
             <div id="blogs-list">
-                {% for element in elements %}
-                    <div class="blogs-list-element">
-                        <!-- Side blog information -->
-                        <div class="blogs-list-element-side">
-                            <div class="blogs-list-element-image-frame">
-                                <img src="{% static element.author_image_url %}"
-                                     alt="Blog author picture" class="blogs-list-element-image"/>
+                {% for blog in blogs_list %}
+                    <a class="no-a-decor" href="{% url 'opened_blog' blog.id %}">
+                        <div class="blogs-list-element">
+                            <!-- Side blog information -->
+                            <div class="blogs-list-element-side">
+                                <div class="blogs-list-element-image-frame">
+                                    <img src="{% static element.author_image_url %}"
+                                         alt="{{blog.author}}'s picture" class="blogs-list-element-image"/>
+                                </div>
+                                <div class="blogs-list-element-author">{{blog.author}}</div>
                             </div>
-                            <div class="blogs-list-element-author">{{element.author}}</div>
-                            <div class="blogs-list-element-datetime">Published at: {{element.datetime}}</div>
+                            <!-- Main blog information -->
+                            <div class="blogs-list-element-main">
+                                <h2 class="blogs-list-element-title">{{blog.title}}</h2>
+                                <div class="blogs-list-element-datetime">Published at: {{blog.datetime}}</div>
+                                <div class="blogs-list-element-description">{{blog.description}}</div>
+                            </div>
                         </div>
-                        <!-- Main blog information -->
-                        <div class="blogs-list-element-main">
-                            <h2 class="blogs-list-element-title">{{element.title}}</h2>
-                            <div class="blogs-list-element-description">{{element.description}}</div>
-                        </div>
-                    </div>
+                    </a>
                 {% endfor %}
             </div>
         </div>

@@ -30,10 +30,12 @@ h1, h2, h3, h4 {
     background-color: #fafafa;
     box-shadow: 4px 4px 16px #8888887f;
     border-radius: 12px;
+    cursor: pointer;
 }
 
 /* Side information of the element */
 .blogs-list-element-side {
+    margin-right: 18px;
     width: 12%;
 }
 
@@ -54,8 +56,8 @@ h1, h2, h3, h4 {
 }
 
 .blogs-list-element-datetime {
-    text-align: center;
-    font-size: 0.6em;
+    font-size: 0.7em;
+    letter-spacing: 0.06em;
 }
 
 /* Main information of the element */
@@ -69,5 +71,8 @@ h1, h2, h3, h4 {
 }
 
 .blogs-list-element-description {
-
+    margin-top: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.4em;
+    font-size: 0.95em;
 }

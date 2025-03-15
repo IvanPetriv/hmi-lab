@@ -10,7 +10,24 @@
     <div class="container">
         {% include "aside_comp.html" %}
         <div class="main-component">
-
+            <h1 class="component-title">{{ blog.title }}</h1>
+            <div id="bdetails-author">
+                <!-- Side blog information -->
+                <div id="bdetails-author-side">
+                    <div id="bdetails-author-image-frame">
+                        <img src="{% static element.author_image_url %}"
+                             alt="{{blog.author}}'s picture" id="bdetails-author-image"/>
+                    </div>
+                </div>
+                <div id="bdetails-author-main">
+                    <div id="bdetails-author-name">Author: {{blog.author}}</div>
+                    <div>Elo: ...</div>
+                    <div id="bdetails-author-datetime">Published at: {{blog.datetime}}</div>
+                </div>
+            </div>
+            <div id="bdetails-content">
+                {{ blog.content }}
+            </div>
         </div>
     </div>
 </body>

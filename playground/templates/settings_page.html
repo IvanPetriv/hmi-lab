@@ -9,7 +9,40 @@
 <body>
     <div class="container">
         {% include "aside_comp.html" %}
-        <div>p</div>
+        <div class="main-component">
+            <h1 class="component-title">Settings</h1>
+            <div id="settings-main">
+                <div id="settings-tabs">
+                    <div>Appearance</div>
+                    <div>Game</div>
+                    <div>Profile</div>
+                    <div>Notifications</div>
+                </div>
+                <div id="settings-list">
+                    <div class="settings-list-element">
+                        <div class="settings-list-element-info">
+                            <div class="settings-list-element-title">Set theme</div>
+                            <div class="settings-list-element-description">Sets the theme</div>
+                        </div>
+                        <div class="settings-list-element-options"></div>
+                    </div>
+                    <div class="settings-list-element">
+                        <div class="settings-list-element-info">
+                            <div class="settings-list-element-title">Piece animation</div>
+                            <div class="settings-list-element-description">Changes the piece animation</div>
+                        </div>
+                        <div class="settings-list-element-options">
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
